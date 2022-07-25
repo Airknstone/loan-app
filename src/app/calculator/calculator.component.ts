@@ -26,9 +26,9 @@ export class CalculatorComponent implements OnInit {
   Validators */
   ngOnInit(): void {
     this.loanFormCalculator = this.fb.group({
-      loanAmount: [ '', Validators.required ],
-      interestRate: [ '', Validators.required ],
-      numOfYears: [ '', Validators.required ]
+      loanAmount: [ '', [ Validators.required, Validators.pattern("^[0-9]*$") ] ],
+      interestRate: [ '', [ Validators.required, Validators.pattern("^[0-9]*$") ] ],
+      numOfYears: [ '', [ Validators.required, Validators.pattern("^[0-9]*$") ] ]
     });
   }
   /* On submit initialize variables from form data */
@@ -44,7 +44,7 @@ export class CalculatorComponent implements OnInit {
 
     /* Loan rate formula */
     this.monthlyPayment = (loanAmount * (ratePerPeriod * Math.pow((ratePerPeriod + 1), numOfMonths))) / (Math.pow((1 + ratePerPeriod), numOfMonths) - 1);
-    this.interestPaid = (this.monthlyPayment * numOfMonths) - loanAmount;
+    this.interestPaid = (parseFloat(this.monthlyPayment.toFixed(2)) * numOfMonths) - loanAmount;
   }
   get form() {
     return this.loanFormCalculator.controls;

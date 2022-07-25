@@ -32,7 +32,8 @@
               <input matInput placeholder="e.x. 4" formControlName="numOfYears">
             </mat-form-field>
             <div fxLayoutAlign="end start">
-              <button style="width: 30%" mat-raised-button color="primary">Calculate</button>
+              <button [disabled]="loanFormCalculator.invalid" style="width: 30%" mat-raised-button
+                color="primary">Calculate</button>
             </div>
           </form>
         </mat-card-content>
