@@ -1,0 +1,24 @@
+<!--
+ Title: payments.components.html
+ Author: Professor Krasso
+ Date: 07/24/2022
+ Modified By: Allan Trejo
+ Description: Assignment 9.2 Capstone Loan App
+  Resources: Material Design https://material.angular.io/components
+-->
+<mat-card class="payment-card mat-elevation-z0">
+  <mat-card-subtitle class="payment-sub">Monthly Payment </mat-card-subtitle>
+  <mat-card-content>
+    <div class="payment-content">
+      <!-- Passed In values monthlypayment -->
+      <p><span>$</span> {{monthlyPayment| number:'1.2-2'}}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-subtitle class="payment-sub">Interest Paid</mat-card-subtitle>
+  <mat-card-content>
+    <div class="payment-content">
+      <!-- passed in values interestPaid -->
+      <p><span>$</span> {{interestPaid| number:'1.2-2'}}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

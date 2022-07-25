@@ -1,0 +1,54 @@
+/*
+ Title: about.components.scss
+ Author: Professor Krasso
+ Date: 07/24/2022
+ Modified By: Allan Trejo
+ Description: Assignment 9.2 Capstone Loan App
+  Resources: Material Design https://material.angular.io/components
+*/
+$slytherin-green: #2a623d;
+#about-title {
+  position: absolute;
+  color: white !important;
+  top: 12%;
+  font-size: 4rem;
+  left: 5%;
+  z-index: 1;
+  font-family: "Rakkas", cursive;
+  border-bottom: 3px solid $slytherin-green;
+  padding: 20px;
+}
+#about-subtitle {
+  position: absolute;
+  top: 28%;
+  right: 5%;
+  z-index: 1;
+  color: white !important;
+  line-height: 40px;
+  font-size: 1.1rem;
+  span {
+    color: #2a623d !important;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+  }
+}
+.image-container {
+  position: relative;
+}
+.mid-section {
+  padding: 1rem 7rem;
+  img {
+    width: 45%;
+    height: 10rem;
+    border-radius: 50%;
+  }
+  h2 {
+    font-family: "Rakkas", cursive !important;
+    font-size: 3rem;
+    margin: 3rem 0 0rem;
+  }
+  .mid-card {
+    text-align: center;
+    width: 70%;
+  }
+}

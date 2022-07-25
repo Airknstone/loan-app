@@ -1,4 +1,11 @@
-
+/*
+ Title: app.module.ts
+ Author: Professor Krasso
+ Date: 07/24/2022
+ Modified By: Allan Trejo
+ Description: Assignment 9.2 Capstone Loan App
+  Resources: Material Design https://material.angular.io/components
+*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,13 +21,19 @@ import { ContactComponent } from './contact/contact.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { PaymentsComponent } from './payments/payments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    PaymentsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +44,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatTooltipModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
